@@ -6,7 +6,7 @@
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 15:19:12 by mchauvin          #+#    #+#             */
-/*   Updated: 2025/11/10 09:46:50 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/10 10:25:24 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *dest;
-	int i;
-	int j;
+	char	*dest;
+	int		i;
+	int		j;
 
 	i = 0;
 	j = 0;

@@ -6,7 +6,7 @@
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 15:33:06 by mchauvin          #+#    #+#             */
-/*   Updated: 2025/11/10 09:47:09 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/10 10:22:36 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ static int	ft_inset(char a, char *set)
 	}
 	return (0);
 }
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
