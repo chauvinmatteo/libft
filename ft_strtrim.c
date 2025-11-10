@@ -6,13 +6,13 @@
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 15:33:06 by mchauvin          #+#    #+#             */
-/*   Updated: 2025/11/10 10:22:36 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/10 14:00:52 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_inset(char a, char *set)
+static int	ft_inset(char a, const char *set)
 {
 	int	i;
 
@@ -29,8 +29,8 @@ static int	ft_inset(char a, char *set)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
-	int		start;
-	int		end;
+	size_t	start;
+	size_t	end;
 	char	*str;
 
 	i = 0;
