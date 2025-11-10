@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mchauvin <mchauvin@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 12:53:35 by mchauvin          #+#    #+#             */
-/*   Updated: 2025/11/05 13:07:26 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/10 09:53:27 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strrchr(const char * str, int to_find)
+#include "libft.h"
+
+char	*ft_strrchr(const char *str, int to_find)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])
@@ -20,17 +22,20 @@ char *ft_strrchr(const char * str, int to_find)
 	while (i >= 0)
 	{
 		if (str[i] == to_find)
-			return ((char*)&str[i]);
+			return ((char *)&str[i]);
 		i--;
 	}
 	return (0);
 }
-#include <stdio.h>
+/*#include <stdio.h>
 
-int main(void)
+int	main(void)
 {
-	char *str = "Hello";
-	int find = 'l';
+	char	*str;
+	int		find;
+
+	str = "Hello";
+	find = 'l';
 	printf("%s\n", ft_strrchr(str, find));
 	return (0);
-}
+}*/
