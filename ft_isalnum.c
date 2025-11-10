@@ -3,27 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mchauvin <mchauvin@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/03 21:33:53 by chauv             #+#    #+#             */
-/*   Updated: 2025/11/05 11:22:32 by mchauvin         ###   ########.fr       */
+/*   Created: 2025/11/04 10:43:18 by mchauvin          #+#    #+#             */
+/*   Updated: 2025/11/10 09:54:47 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int ft_isalnum(int a)
+int	ft_isalnum(int a)
 {
-    if ((a >= 'a' && a <= 'z')
-        || (a >= 'A' && a <= 'Z') 
-        || (a >= '0' && a <= '9'))
-        return (1);
-    return (0);
-}
-int main(void)
-{
-    printf("%d\n", ft_isalnum('D'));
-    printf("%d\n", ft_isalnum('d'));
-    printf("%d\n", ft_isalnum('3'));
-    printf("%d\n", ft_isalnum('.'));
+	if ((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z') || (a >= '0'
+			&& a <= '9'))
+		return (1);
+	return (0);
 }

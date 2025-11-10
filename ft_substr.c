@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mchauvin <mchauvin@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 11:14:21 by mchauvin          #+#    #+#             */
-/*   Updated: 2025/11/07 11:50:50 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/10 09:47:14 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned int i;
-	char *ptr;
+	unsigned int	i;
+	char			*ptr;
 
 	i = 0;
 	if (!s[0])
@@ -35,4 +35,3 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	ptr[i] = '\0';
 	return (ptr);
 }
-
