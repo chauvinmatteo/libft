@@ -1,45 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/04 18:42:19 by chauv             #+#    #+#             */
-/*   Updated: 2025/11/10 16:24:20 by mchauvin         ###   ########.fr       */
+/*   Created: 2025/11/10 15:59:47 by mchauvin          #+#    #+#             */
+/*   Updated: 2025/11/10 16:09:04 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+static int	ft_countword(const char *str, const char c)
 {
-	size_t			i;
-	unsigned char	*d;
-	unsigned char	*s;
+	int	i;
+	int	count;
 
 	i = 0;
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	if (!src)
-		return (NULL);
-	if (n == 0)
-		return (dest);
-	while (i < n)
+	count = 0;
+	while (str[i])
 	{
-		d[i] = s[i];
-		i++;
+		while (str[i] == c)
+			i++;
+		if (str[i] != c && (i = 0 || str[i - 1] == c))
+		{
+			count++;
+			i++;
+		}
 	}
-	return (dest);
+	return (count);
 }
-/*#include <stdio.h>
 
-int	main(void)
+
+char	**ft_split(char const *s, char c)
 {
-	char *s = "Test";
-	char d[0];
-	ft_memcpy(d, s, 4);
-	d[4] = '\0';
-	printf("%s\n", d);
-
-}*/
+}
