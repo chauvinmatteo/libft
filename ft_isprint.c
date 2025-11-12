@@ -6,7 +6,7 @@
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 10:28:16 by mchauvin          #+#    #+#             */
-/*   Updated: 2025/11/10 09:42:42 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/12 13:15:03 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,12 @@ int	ft_isprint(int a)
 		return (1);
 	return (0);
 }
+/*#include <ctype.h>
+#include <stdio.h>
+
+int main(void)
+{
+	int c = 'a';
+	printf("%d\n",ft_isprint((unsigned char)c));
+	printf("%d\n", isprint(c));
+}*/
