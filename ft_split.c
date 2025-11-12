@@ -6,7 +6,7 @@
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 15:59:47 by mchauvin          #+#    #+#             */
-/*   Updated: 2025/11/11 14:48:47 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/12 11:55:15 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,17 @@
 
 static int	ft_nextword(const char *s, int *i, int *start, char c)
 {
+	if (c == '\0')
+	{
+		if (*i == 0 && s[*i])
+		{
+			*start = 0;
+			while (s[*i])
+				(*i)++;
+			return (1);
+		}
+		return (0);
+	}
 	while (s[*i] == c)
 		(*i)++;
 	if (!s[*i])
@@ -31,6 +42,10 @@ static int	ft_countword(const char *str, const char c)
 
 	i = 0;
 	count = 0;
+	if (!str || !*str)
+		return (0);
+	if (c == '\0')
+		return (1);
 	while (str[i])
 	{
 		while (str[i] == c)

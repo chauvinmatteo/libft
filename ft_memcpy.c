@@ -6,7 +6,7 @@
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 18:42:19 by chauv             #+#    #+#             */
-/*   Updated: 2025/11/10 16:24:20 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/12 11:09:09 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
-	if (!src)
+	if (!dest && !src)
 		return (NULL);
-	if (n == 0)
-		return (dest);
 	while (i < n)
 	{
 		d[i] = s[i];
