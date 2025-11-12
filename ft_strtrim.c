@@ -6,7 +6,7 @@
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 15:33:06 by mchauvin          #+#    #+#             */
-/*   Updated: 2025/11/10 14:00:52 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/12 11:46:04 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,23 +33,21 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 	char	*str;
 
-	i = 0;
-	start = 0;
-	end = ft_strlen(s1) - 1;
 	if (!s1)
 		return (NULL);
 	if (!set)
 		return (ft_strdup(s1));
+	start = 0;
+	end = ft_strlen(s1);
 	while (s1[start] && ft_inset(s1[start], set))
 		start++;
-	while (end >= 0 && ft_inset(s1[end], set))
+	while (end > start && ft_inset(s1[end - 1], set))
 		end--;
-	if (start > end)
-		return (ft_strdup(""));
-	str = malloc(sizeof(char) * (end - start + 2));
+	str = malloc(sizeof(char) * (end - start + 1));
 	if (!str)
 		return (NULL);
-	while (start <= end)
+	i = 0;
+	while (start < end)
 		str[i++] = s1[start++];
 	str[i] = '\0';
 	return (str);

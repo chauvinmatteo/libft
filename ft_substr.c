@@ -6,7 +6,7 @@
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 11:14:21 by mchauvin          #+#    #+#             */
-/*   Updated: 2025/11/10 11:40:13 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/12 11:59:02 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char			*ptr;
 
 	i = 0;
-	if (!s[0])
+	if (!s)
 		return (NULL);
-	if (start >= (unsigned int)ft_strlen((char *)s))
+	if (!s[0])
 		return (ft_strdup(""));
-	if (len >= (unsigned int)ft_strlen((char *)s) - start)
-		len = (unsigned int)ft_strlen((char *)s) - start;
+	if (start >= (unsigned int)ft_strlen(s))
+		return (ft_strdup(""));
+	if (len >= ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
 	ptr = malloc(sizeof(char) * (len + 1));
 	if (!ptr)
 		return (NULL);
