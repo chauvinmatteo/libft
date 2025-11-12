@@ -6,7 +6,7 @@
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 11:14:21 by mchauvin          #+#    #+#             */
-/*   Updated: 2025/11/12 11:59:02 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/12 13:39:23 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (!s[0])
 		return (ft_strdup(""));
-	if (start >= (unsigned int)ft_strlen(s))
+	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
 	if (len >= ft_strlen(s) - start)
 		len = ft_strlen(s) - start;
