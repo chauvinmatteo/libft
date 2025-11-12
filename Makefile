@@ -6,11 +6,11 @@
 #    By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/06 15:31:42 by mchauvin          #+#    #+#              #
-#    Updated: 2025/11/12 13:36:34 by mchauvin         ###   ########.fr        #
+#    Updated: 2025/11/12 14:48:33 by mchauvin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-.PHONY: all re clean fclean
+.PHONY: all re clean fclean bonus
 
 NAME = libft.a
 
@@ -27,6 +27,10 @@ SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 
 OBJS = $(SRCS:.c=.o)
 
+SRCS_BONUS = ft_lstnew.c
+
+OBJS_BONUS = $(SRCS_BONUS:.c=.o)
+
 all : $(NAME)
 
 %.o:%.c
@@ -35,8 +39,11 @@ all : $(NAME)
 $(NAME):$(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
+bonus : $(OBJS) $(OBJS_BONUS)
+	$(AR) $(NAME) $(OBJS_BONUS)
+
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(OBJS_BONUS)
 fclean:	clean
 	rm -f $(NAME)
 
