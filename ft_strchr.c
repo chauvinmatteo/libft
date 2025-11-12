@@ -6,7 +6,7 @@
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 12:32:55 by mchauvin          #+#    #+#             */
-/*   Updated: 2025/11/10 09:46:44 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/12 11:03:05 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 char	*ft_strchr(const char *str, int to_find)
 {
-	int	i;
+	int				i;
+	unsigned char	tf;
 
 	i = 0;
+	tf = (unsigned char)to_find;
 	while (str[i])
 	{
-		if (str[i] == to_find)
+		if ((unsigned char)str[i] == tf)
 			return ((char *)&str[i]);
 		i++;
 	}
