@@ -6,7 +6,7 @@
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 10:42:09 by mchauvin          #+#    #+#             */
-/*   Updated: 2025/11/10 09:54:55 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/12 13:14:03 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,12 @@ int	ft_isdigit(int i)
 		return (1);
 	return (0);
 }
+/*#include <ctype.h>
+#include <stdio.h>
+
+int main(void)
+{
+	int c = '5';
+	printf("%d\n",ft_isdigit((unsigned char)c));
+	printf("%d\n", isdigit(c));
+}*/

@@ -6,7 +6,7 @@
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 10:38:33 by mchauvin          #+#    #+#             */
-/*   Updated: 2025/11/10 09:54:49 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/12 13:12:12 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,12 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
+/*#include <ctype.h>
+#include <stdio.h>
+
+int main(void)
+{
+	int c = 'a';
+	printf("%d\n",ft_isalpha((unsigned char)c));
+	printf("%d\n", isalpha(c));
+}*/
