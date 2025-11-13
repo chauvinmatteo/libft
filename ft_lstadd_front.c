@@ -1,42 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/12 14:11:05 by mchauvin          #+#    #+#             */
-/*   Updated: 2025/11/12 14:50:49 by mchauvin         ###   ########.fr       */
+/*   Created: 2025/11/13 08:38:06 by mchauvin          #+#    #+#             */
+/*   Updated: 2025/11/13 09:10:17 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	t_list	*lst;
-
-	lst = malloc(sizeof(t_list));
-	if (!lst)
-		return (NULL);
-	lst->content = content;
-	lst->next = NULL;
-	return (lst);
+	if (!lst || !new)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }
 /*
 #include <stdio.h>
 
 int	main(void)
 {
-	t_list *lst;
+	t_list *head = NULL;
+	t_list *n1 = ft_lstnew("mchauvin!");
+	t_list *n2 = ft_lstnew("Votez");
 
-	lst = ft_lstnew("hihi 42");
-	if (!lst)
-		return (1);
-
-	printf("Content  : %s\n", (char*)lst->content);
-	printf("Next     : %p\n", (void *)lst->next);
-
-	free(lst);
+	ft_lstadd_front(&head, n1);
+	ft_lstadd_front(&head, n2);
+	printf("%s ", (char *)head->content);
+	printf("%s\n", (char *)head->next->content);
 	return (0);
 }*/

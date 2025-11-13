@@ -1,42 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/12 14:11:05 by mchauvin          #+#    #+#             */
-/*   Updated: 2025/11/12 14:50:49 by mchauvin         ###   ########.fr       */
+/*   Created: 2025/11/13 09:23:35 by mchauvin          #+#    #+#             */
+/*   Updated: 2025/11/13 09:24:51 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+int	ft_lstsize(t_list *lst)
 {
-	t_list	*lst;
+	int		count;
+	t_list	*tmp;
 
-	lst = malloc(sizeof(t_list));
-	if (!lst)
-		return (NULL);
-	lst->content = content;
-	lst->next = NULL;
-	return (lst);
+	count = 0;
+	tmp = lst;
+	while (tmp)
+	{
+		count++;
+		tmp = tmp->next;
+	}
+	return (count);
 }
 /*
 #include <stdio.h>
 
 int	main(void)
 {
-	t_list *lst;
-
-	lst = ft_lstnew("hihi 42");
-	if (!lst)
-		return (1);
-
-	printf("Content  : %s\n", (char*)lst->content);
-	printf("Next     : %p\n", (void *)lst->next);
-
-	free(lst);
-	return (0);
+	t_list *head = NULL;
+	t_list *n1 = ft_lstnew("Votez");
+	t_list *n2 = ft_lstnew("mchauvin!");
+	ft_lstadd_front(&head, n1);
+	ft_lstadd_front(&head, n2);
+	int size = ft_lstsize(head);
+	printf("%d\n", size);
 }*/
