@@ -6,7 +6,7 @@
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 14:18:05 by mchauvin          #+#    #+#             */
-/*   Updated: 2025/11/13 09:39:02 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/13 09:57:41 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,5 @@ t_list				*ft_lstnew(void *content);
 void				ft_lstadd_front(t_list **lst, t_list *new);
 int					ft_lstsize(t_list *lst);
 t_list				*ft_lstlast(t_list *lst);
-
+void				ft_lstadd_back(t_list **lst, t_list *new);
 #endif
