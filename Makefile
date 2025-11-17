@@ -6,7 +6,7 @@
 #    By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/06 15:31:42 by mchauvin          #+#    #+#              #
-#    Updated: 2025/11/17 09:10:09 by mchauvin         ###   ########.fr        #
+#    Updated: 2025/11/17 11:28:10 by mchauvin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,11 +40,15 @@ all : $(NAME)
 $(NAME):$(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
-bonus : $(OBJS) $(OBJS_BONUS)
+bonus : .bonus
+
+.bonus : $(OBJS) $(OBJS_BONUS)
 	$(AR) $(NAME) $(OBJS_BONUS)
+	touch .bonus
 
 clean:
 	rm -f $(OBJS) $(OBJS_BONUS)
+	rm -f .bonus
 fclean:	clean
 	rm -f $(NAME)
 
