@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 12:10:10 by mchauvin          #+#    #+#             */
-/*   Updated: 2025/11/13 17:10:21 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/17 10:44:19 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (newlst);
 }
-/*void	*ft_to_upper(void *content)
+/*static void	*ft_to_upper(void *content)
 {
 	char	*str;
 	char	*newlst;
