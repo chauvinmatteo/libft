@@ -6,7 +6,7 @@
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 09:54:14 by mchauvin          #+#    #+#             */
-/*   Updated: 2025/11/12 10:07:12 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/17 10:41:03 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
-/*void	to_upper_even(unsigned int i, char *c)
+/*
+static void	to_upper_even(unsigned int i, char *c)
 {
 	if (i % 2 == 0)
 		*c = ft_toupper(*c);

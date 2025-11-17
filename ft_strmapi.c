@@ -6,7 +6,7 @@
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 09:33:28 by mchauvin          #+#    #+#             */
-/*   Updated: 2025/11/12 09:52:50 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/17 10:42:26 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-/*char	tolower_adapter(unsigned int i, char c)
+/*static char	ft_lower(unsigned int i, char c)
 {
 	(void)i;
 	return ((char)ft_tolower((int)c));
@@ -42,7 +42,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 int	main(void)
 {
 	char *str = "DADADSDWQFASGA";
-	char *res = ft_strmapi(str, tolower_adapter);
+	char *res = ft_strmapi(str, ft_lower);
 	if (res)
 	{
 		printf("Before function : %s\n", str);

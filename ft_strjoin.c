@@ -6,7 +6,7 @@
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 15:19:12 by mchauvin          #+#    #+#             */
-/*   Updated: 2025/11/10 13:21:54 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/17 09:39:23 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,17 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	dest[i] = '\0';
 	return (dest);
 }
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	char *s1 = "Test";
+	char *s2 = "tesT";
+	char *dest;
+	
+	dest = ft_strjoin(s1, s2);
+	printf ("%s\n", dest);
+	free (dest);
+	return (0);
+}*/

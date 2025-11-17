@@ -6,7 +6,7 @@
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 15:33:06 by mchauvin          #+#    #+#             */
-/*   Updated: 2025/11/12 11:46:04 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/17 10:28:07 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,3 +52,16 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str[i] = '\0';
 	return (str);
 }
+/*
+#include <stdio.h>
+
+int main(void)
+{
+	char *s = "XXXXXXXXXXCPIETRZAAAAAAXXXXXXX";
+	char *set = "X";
+	char *res = ft_strtrim(s, set);
+
+	printf("%s\n", res);
+	free (res);
+	return (0);
+}*/

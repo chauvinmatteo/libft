@@ -6,17 +6,17 @@
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 11:20:06 by mchauvin          #+#    #+#             */
-/*   Updated: 2025/11/10 09:46:52 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/17 10:42:56 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	unsigned int	dest_len;
-	unsigned int	src_len;
-	unsigned int	i;
+	size_t	dest_len;
+	size_t	src_len;
+	size_t	i;
 
 	dest_len = 0;
 	src_len = 0;
@@ -38,3 +38,16 @@ unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size)
 	}
 	return (dest_len + src_len);
 }
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	char *src = "Test";
+	char dest[9] = "tesT";
+	size_t res = ft_strlcat(dest, src, sizeof(dest));
+
+	printf("%s\n", dest);
+	printf("%zu\n", res);
+	return (0);
+}*/
