@@ -6,7 +6,7 @@
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 11:15:14 by mchauvin          #+#    #+#             */
-/*   Updated: 2025/11/12 13:27:30 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/17 11:03:18 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	ft_atoi(const char *nptr)
 
 int	main(void)
 {
-	const char *s = "--2147483648";
+	const char *s = "-144";
 	printf("%d\n", ft_atoi(s));
 	printf("%d\n", atoi(s));
 }*/
