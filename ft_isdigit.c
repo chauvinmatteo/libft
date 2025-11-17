@@ -6,15 +6,15 @@
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 10:42:09 by mchauvin          #+#    #+#             */
-/*   Updated: 2025/11/12 13:14:03 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/17 12:58:48 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int i)
+int	ft_isdigit(int c)
 {
-	if (i >= '0' && i <= '9')
+	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }
