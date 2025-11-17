@@ -6,7 +6,7 @@
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 10:00:32 by chauv             #+#    #+#             */
-/*   Updated: 2025/11/13 11:25:31 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/17 09:23:17 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,12 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 }
 /*
 #include <stdio.h>
-#include <string.h>
 
 int	main(void)
 {
 	char *s = "Test";
 	char d[] = "STPP";
 	ft_memmove(d, s, 4);
-	memmove(d, s, 4);
 	d[4] = '\0';
 	printf("%s\n", d);
 }*/

@@ -6,16 +6,16 @@
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 10:36:22 by chauv             #+#    #+#             */
-/*   Updated: 2025/11/10 10:25:53 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/17 10:36:13 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	unsigned int	i;
-	unsigned int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;
@@ -31,3 +31,16 @@ unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
 	dest[j] = '\0';
 	return (i);
 }
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	char *src = "Test";
+	char dest[20];
+	size_t res = ft_strlcpy(dest, src, sizeof(dest));
+
+	printf("%s\n", dest);
+	printf("%zu\n", res);
+	return (0);
+}*/

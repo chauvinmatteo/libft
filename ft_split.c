@@ -6,7 +6,7 @@
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 15:59:47 by mchauvin          #+#    #+#             */
-/*   Updated: 2025/11/12 11:55:15 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/17 09:26:10 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,8 +120,8 @@ char	**ft_split(char const *s, char c)
 
 int	main(void)
 {
-	const char	*str = "Jjqofanlfmafmqsamcamiqngdkfsafalmalsf";
-	const char	sep = 'f';
+	const char	*str = "grand-test-pour-ft_split-merci";
+	const char	sep = '-';
 	char		**tab;
 	int			i;
 

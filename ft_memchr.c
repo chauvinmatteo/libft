@@ -6,7 +6,7 @@
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 10:05:25 by mchauvin          #+#    #+#             */
-/*   Updated: 2025/11/10 09:52:22 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/17 09:20:45 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main(void)
 {
 	char *str = "Bonjour";
 	int to_find = 'n';
-	char *res = ft_memchr(str, to_find, 2);
+	char *res = ft_memchr(str, to_find, 8);
 	printf("%s\n", res);
 	return (0);
 }*/
