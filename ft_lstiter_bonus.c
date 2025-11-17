@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 11:52:52 by mchauvin          #+#    #+#             */
-/*   Updated: 2025/11/13 16:16:41 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/17 10:44:29 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	}
 }
 /*
-void	ft_to_upper(void *content)
+static void	ft_to_upper(void *content)
 {
 	char	*str;
 
