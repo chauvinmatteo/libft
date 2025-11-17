@@ -6,7 +6,7 @@
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 12:48:12 by mchauvin          #+#    #+#             */
-/*   Updated: 2025/11/17 10:52:59 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/17 15:58:40 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t	total;
 	void	*ptr;
 
-	if (nmemb && size > __SIZE_MAX__ / nmemb)
+	if (nmemb && size >= __SIZE_MAX__ / nmemb)
 		return (NULL);
 	total = nmemb * size;
 	ptr = malloc(total);
