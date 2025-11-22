@@ -6,7 +6,7 @@
 /*   By: mchauvin <mchauvin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 10:00:32 by chauv             #+#    #+#             */
-/*   Updated: 2025/11/17 09:23:17 by mchauvin         ###   ########.fr       */
+/*   Updated: 2025/11/21 10:10:23 by mchauvin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
-	if (!dest && !src)
-		return (NULL);
 	if (dest > src)
 	{
 		while (n--)
@@ -40,12 +38,13 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 }
 /*
 #include <stdio.h>
+#include <string.h>
 
 int	main(void)
 {
 	char *s = "Test";
-	char d[] = "STPP";
+	char d[5];
 	ft_memmove(d, s, 4);
-	d[4] = '\0';
+	d[0] = '\0';
 	printf("%s\n", d);
 }*/
